@@ -59,7 +59,7 @@ Weawer.show()
 
 def get_weather_city():
     txt = ui.lineEdit.text()
-    respone = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=199fa8caaed78f8fe79860c384edacc7".format(txt)
+    respone = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={Token}".format(txt)
     res = requests.get(respone)
     data = res.json()
     temp = data["main"]["temp"] - 273
